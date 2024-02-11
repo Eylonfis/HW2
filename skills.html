@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="Base.css" />
+    <title>Skills</title>
+  </head>
+  <header>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="EylonF.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-bar">
+      <div class="mobile-nav-icon" id="mobile-nav-icon">&#9776;</div>
+
+      <ul class="mobile-nav-links" id="mobile-nav-links">
+        <li><a href="EylonF.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <h2>Proffesional Skills</h2>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="icon">&#60;/&#62;</div>
+        <h3>HTML</h3>
+        <p>Building the structure of web pages with semantic markup.</p>
+      </div>
+      <div class="skill">
+        <div class="icon">#</div>
+        <h3>CSS</h3>
+        <p>Styling and designing web pages for a visually appealing look.</p>
+      </div>
+      <div class="skill">
+        <div class="icon">JS</div>
+        <h3>JavaScript</h3>
+        <p>Creating interactive and dynamic user experiences on the web.</p>
+      </div>
+      <div class="skill">
+        <div class="icon">C#</div>
+        <h3>C#</h3>
+        <p>
+          Developing software applications using the C# programming language.
+        </p>
+      </div>
+      <div class="skill">
+        <div class="icon">C++</div>
+        <h3>C++</h3>
+        <p>Building high-performance applications with C++.</p>
+      </div>
+      <div class="skill">
+        <div class="icon">MS</div>
+        <h3>Office</h3>
+        <p>
+          Proficient in Microsoft Office applications for documentation and
+          presentation.
+        </p>
+      </div>
+      <div class="skill">
+        <div class="icon">SQL</div>
+        <h3>SQL</h3>
+        <p>Managing and querying databases using SQL.</p>
+      </div>
+    </div>
+  </body>
+
+  <section id="contact">
+    <h1>To Contact Please Leave Your Details</h1>
+    <form>
+      <input placeholder="Name" type="text" />
+      <input placeholder="Email" type="email" />
+
+      <button>Send Message</button>
+    </form>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var currentPage = window.location.pathname.split("/").pop();
+      var links = document.querySelectorAll("nav ul a");
+
+      links.forEach(function (link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var mobileNavIcon = document.getElementById("mobile-nav-icon");
+      var mobileNavLinks = document.getElementById("mobile-nav-links");
+
+      mobileNavIcon.addEventListener("click", function () {
+        mobileNavLinks.classList.toggle("show");
+      });
+    });
+  </script>
+  <footer>
+    <p>&copy; 2024 Eylon Fischman</p>
+  </footer>
+</html>

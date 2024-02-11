@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="EylonF.css" />
+    <link rel="stylesheet" />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="EylonF.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-bar">
+        <div class="mobile-nav-icon" id="mobile-nav-icon">&#9776;</div>
+
+        <ul class="mobile-nav-links" id="mobile-nav-links">
+          <li><a href="EylonF.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/eylon_fischman/" target="_blank">
+          <img
+            src="instegramlogo-removebg-preview.png"
+            alt="Instagram"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/eylon.fischman/?locale=he_IL"
+          target="_blank"
+        >
+          <img
+            src="facebooklogo1-removebg-preview.png"
+            alt="Facebook"
+            width="30"
+            height="30"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1 class="page-title">Eylon Fischman</h1>
+        <img src="Profile.jpeg" alt="Eylon Fischman" />
+
+        <p>Web Developer | Industrial Engineering and Management Student</p>
+        <a href="Eylon Fischman.pdf" target="_blank">
+          <button id="resume-btn">Open Resume</button>
+        </a>
+        <button id="details-btn">Contact Me</button>
+        <ul id="details-list">
+          <li><strong>Email:</strong> Eylonf1912@gmail.com</li>
+          <li><strong>Phone:</strong> 0532868760</li>
+          <li><strong>Location:</strong> Givatayim, Israel</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.pathname.split("/").pop();
+        var links = document.querySelectorAll("nav ul a");
+
+        links.forEach(function (link) {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      document
+        .getElementById("details-btn")
+        .addEventListener("click", function () {
+          document.getElementById("details-list").style.display = "block";
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var mobileNavIcon = document.getElementById("mobile-nav-icon");
+        var mobileNavLinks = document.getElementById("mobile-nav-links");
+
+        mobileNavIcon.addEventListener("click", function () {
+          mobileNavLinks.classList.toggle("show");
+        });
+      });
+    </script>
+    <footer>
+      <p>&copy; 2024 Eylon Fischman</p>
+    </footer>
+  </body>
+</html>

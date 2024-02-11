@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eylon Fischman</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="EylonF.html" id="home-link">Home</a></li>
+          <li><a href="about.html" id="about-link">About</a></li>
+          <li><a href="skills.html" id="skills-link">Skills</a></li>
+          <li><a href="projects.html" id="projects-link">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <footer>
+      <p>&copy; 2024 Eylon Fischman</p>
+    </footer>
+
+    <script>
+      // Add active class to the current navigation link based on the current URL
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.pathname.split("/").pop();
+        var links = document.querySelectorAll("nav ul a");
+
+        links.forEach(function (link) {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

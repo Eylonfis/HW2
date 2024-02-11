@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projects.css" />
+    <title>Projects</title>
+  </head>
+  <header>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="EylonF.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-bar">
+      <div class="mobile-nav-icon" id="mobile-nav-icon">&#9776;</div>
+
+      <ul class="mobile-nav-links" id="mobile-nav-links">
+        <li><a href="EylonF.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="recent-projects - preview">
+    <h2>Projects</h2>
+    <style>
+      .project-card img {
+        width: 300px;
+        height: auto;
+      }
+    </style>
+    <div class="project-card">
+      <img src="FASTVISA-removebg-preview.png" alt="FASTVISA" />
+      <h3>FastVisaUSA</h3>
+      <p>Self Employd, Buiessness owner - issuing visa for USA.</p>
+      <p>
+        In the last two years, I built a business for issuing visas to the USA,
+        during which I dealt with a number of main things:
+      </p>
+      <section id="skills">
+        <ul class="skills-list">
+          <li>Customer service and relations.</li>
+          <li>Hiring and training employees.</li>
+          <li>Pricing of the relevant services.</li>
+          <li>Working with several clients simultaneously.</li>
+          <li>Providing solutions, improving, and scaling the processes.</li>
+          <li>Built a profitable business in a short period of time.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="project-card">
+      <img src="BOOM-removebg-preview.png" />
+      <h3>Developing Explosive Device</h3>
+      <p>
+        In part of my miletry service I was a charge of developing an existing
+        explosive device and its transformation into a more technological and
+        modern one that is suitable for certain operations that require speed
+        and caution.
+      </p>
+      <section id="skills2">
+        <ul class="skills-list2">
+          <li>Working with relevent participant for planning.</li>
+          <li>Help in designing and manufacturer.</li>
+          <li>Changes by adepting it fot the combatant.</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var currentPage = window.location.pathname.split("/").pop();
+      var links = document.querySelectorAll("nav ul a");
+
+      links.forEach(function (link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var mobileNavIcon = document.getElementById("mobile-nav-icon");
+      var mobileNavLinks = document.getElementById("mobile-nav-links");
+
+      mobileNavIcon.addEventListener("click", function () {
+        mobileNavLinks.classList.toggle("show");
+      });
+    });
+  </script>
+  <footer>
+    <p>&copy; 2024 Eylon Fischman</p>
+  </footer>
+</html>

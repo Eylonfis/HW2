@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="about.css" />
+    <title>About</title>
+  </head>
+  <head>
+    <header>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="EylonF.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-bar">
+        <div class="mobile-nav-icon" id="mobile-nav-icon">&#9776;</div>
+
+        <ul class="mobile-nav-links" id="mobile-nav-links">
+          <li><a href="EylonF.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+  </head>
+  <body>
+    <section id="about">
+      <h1>About Me</h1>
+
+      <style>
+        img {
+          width: 300px;
+          height: auto;
+        }
+      </style>
+      <section id="about">
+        <div class="about-content">
+          <div class="styled-paragraph">
+            <p>
+              From a young age, I liked to do many things, especially those
+              related to movement and sports. As a child, I explored various
+              classes, including soccer, basketball, tennis, ping pong, hiking,
+              and the most important of all — climbing.
+            </p>
+            <p>
+              At the age of 13, I was exposed to this sport, and I just fell in
+              love. I trained a lot and became good, eventually being accepted
+              into the climbing team of Boulder Haifa. Climbing became a central
+              part of my life, and I transformed into a competitive athlete in
+              the field.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <p style="font-size: 16px"><b>For more info press the picture</b></p>
+
+      <div class="hobbies-card">
+        <div class="hobby">
+          <a href="https://www.boulder.co.il/" target="_blank">
+            <img src="bolder.jpeg" alt="Rock Climbing" />
+            <p>Me bouldering in israel champinship tour</p>
+          </a>
+        </div>
+        <div class="hobby">
+          <a
+            href="https://www.youtube.com/watch?v=iVJSO8QtkmM&t=7s"
+            target="_blank"
+          >
+            <img
+              src="Rafael_Nadal_2011_Roland_Garros_2011-crop-removebg-preview.png"
+              alt=" Playing Tennis"
+            />
+            <p>Me Playing Tennis</p>
+          </a>
+        </div>
+        <div class="hobby">
+          <a
+            href="https://www.ekur.es/actividades/trekking-pirineos/3-refugios-posets/"
+            target="_blank"
+          >
+            <img src="Pirineym.jpeg" alt="Backpacking In Pyrenees Mountains" />
+            <p>Backpacking at Pyrenees Mountains</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var currentPage = window.location.pathname.split("/").pop();
+      var links = document.querySelectorAll("nav ul a");
+
+      links.forEach(function (link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var mobileNavIcon = document.getElementById("mobile-nav-icon");
+      var mobileNavLinks = document.getElementById("mobile-nav-links");
+
+      mobileNavIcon.addEventListener("click", function () {
+        mobileNavLinks.classList.toggle("show");
+      });
+    });
+  </script>
+  <footer>
+    <p>&copy; 2024 Eylon Fischman</p>
+  </footer>
+</html>
